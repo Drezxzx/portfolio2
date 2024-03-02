@@ -1,0 +1,66 @@
+<header class=" fixed  top-0 z-10 flex items-center justify-center w-full mx-auto mt-2 ">
+    
+
+    <nav class="flex flex-row gap-6 w-[23rem] md:gap-10 opacity-90 p-1 md:w-[28rem] md:p-2 rounded-full items-center justify-center ">
+        <a href="#Inicio" class="hover:scale-110 transition hover:text-purple-500">Inicio</a>
+        <a href="#Sobre mi" class="hover:scale-110 transition hover:text-purple-500">Sobre mi</a>
+        <a href="#Proyectos" class="hover:scale-110 transition hover:text-purple-500">Proyectos</a>
+        <a href="#Experiencia" class="hover:scale-110 transition hover:text-purple-500">Experiencia</a>
+    </nav>
+</header>
+
+<style>
+    nav {
+      animation: nav-shadown 1s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+    }
+  
+    @keyframes nav-shadown {
+      to {
+        @apply shadow-lg ring-1 backdrop-blur  bg-white/50 ring-white/10;
+      }
+    }
+  </style>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+      const sections = document.querySelectorAll("section")
+      const navItems = document.querySelectorAll("header nav a")
+  
+      const callback = (entries: any[]) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navItems.forEach((item) => {
+              if (item.getAttribute("aria-label") == entry.target.id) {
+                item.classList.add("text-purple-500")
+              } else {
+                item.classList.remove("text-purple-500")
+              }
+            })
+          }
+        })
+      }
+  
+      const observer = new IntersectionObserver(callback, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.3,
+      })
+  
+      sections.forEach((section) => {
+        observer.observe(section)
+      })
+  
+      // Cleanup function
+      document.onvisibilitychange = () => {
+        if (document.visibilityState === "hidden") {
+          observer.disconnect()
+        } else {
+          sections.forEach((section) => {
+            observer.observe(section)
+          })
+        }
+      }
+    })
+  </script>

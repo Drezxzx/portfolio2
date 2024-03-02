@@ -1,0 +1,130 @@
+---
+import Css from "../icons/Css.astro";
+import Html from "../icons/Html.astro";
+import Js from "../icons/Js.astro";
+import Php from "../icons/Php.astro";
+import Preview from "../icons/Preview.astro";
+import Github from "../icons/Github.astro";
+import Sql from "../icons/Sql.astro";
+import Node from "../icons/Node.astro";
+
+import Social from "./Social.astro";
+
+const TAGS = {
+    PHP: {
+        name: "PHP",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: Php,
+    },
+    JS: {
+        name: "JS",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: Js,
+    },
+    HTML: {
+        name: "html",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: Html,
+    },
+    CSS: {
+        name: "css",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: Css,
+    },
+    NODE_JS: {
+        name: "node.js",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: Node,
+    },
+    MYSQL: {
+        name: "mysql",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: Sql,
+    },
+};
+const PROJECTS = [
+    {
+        tittle: "Instagram Clone",
+        description:
+            "Clon de instagram desarrollado usando php y js con las funcionalidades de subir fotos, dar likes, comentar, login, seguir/dejar de seguir usuarios. Todo esto apoyado por una api y base de datos propia.",
+        img: "../../public/project3.png",
+        tags: [TAGS.PHP, TAGS.JS, TAGS.HTML, TAGS.CSS, TAGS.MYSQL],
+        github: "https://github.com/Drezxzx/instagram-clone",
+        link: "https://drezzgram.000webhostapp.com/api/src/controllers/main.php",
+    },
+    {
+        tittle: "Bazar-store",
+        description:
+            "App de que simula ser un buscador de una tienda con funcionalidades de filtrar y de busqueda y detalle del producto.",
+        img: "../../public/project2.png",
+        tags: [TAGS.PHP, TAGS.JS, TAGS.HTML, TAGS.CSS],
+        github: "https://github.com/Drezxzx/bazar-store",
+        link: "https://bazar-store.000webhostapp.com/bazar-store/main.php",
+    },
+    {
+        tittle: "Trivia",
+        description:
+            "Un trivia desarrollado con node.js, siguiendo la arquitectura MVC. Esta aplicación cuenta con un login para guardar puntuaciones de las partidas y mostrarse en un ranking global. Todo esto apoyado por una base de datos y api propia",
+        img: "../../public/trivia.png",
+        tags: [TAGS.NODE_JS, TAGS.MYSQL, TAGS.JS, TAGS.HTML, TAGS.CSS],
+        github: "https://github.com/Drezxzx/trivia",
+        link: "trivia-ui0k.onrender.com/",
+    },
+    {
+        tittle: "reading-list",
+        description:
+            "Aplicación basado en las pruebas tecnicas de midudev, cuenta con una busqeda de libros, capacidad de filtrar y guardar en favoritos.",
+        img: "../../public/project1.png",
+        tags: [TAGS.JS, TAGS.HTML, TAGS.CSS],
+        github: "https://github.com/Drezxzx/reading-list",
+        link: "https://drezxzx.github.io/reading-list/",
+    },
+];
+---
+
+{
+    PROJECTS.map(({ tittle, description, img, github, tags,link }) => (
+        <article class="size-30 mb-24" >
+            <div >
+                <h3 class="md:text-2xl lg:text-3xl text-xl  flex flex-row justify-between   mb-2 font-semibold text-purple-400/80">
+                    {tittle} <ul class="flex text-white flex-row gap-x-2">
+                <li>
+                    <Social class=" bg-[#1f2937] hover:bg-[#242d39]" href={github}>
+                        <Github class="size-5 md:size-6 lg:size-7"></Github>
+                        Repositorio 
+                    </Social>
+                  
+                </li>
+                <li>
+                    <Social class="  bg-[#1f2937] hover:bg-[#242d39]" href={link}>
+                        <Preview class="size-5 md:size-6 lg:size-7"></Preview>
+                        Preview 
+                    </Social>
+                
+                </li>
+                
+            </ul>
+                </h3>
+                <p class="text-base  md:text-xl mb-4 md:mb-6 text-pretty">{description} </p>
+                <ul class="flex flex-row gap-x-1 md:gap-x-2 min-w-60 md:min-w-120  mb-2">
+                    {tags.map((tag) => (
+                        <li>
+                            <span
+                                class={` text-xs font-semibold flex lg:gap-x-2 gap-x-1 items-center flex-row rounded-full py-1 px-2 ${tag.class}`}
+                            >
+                                <tag.icon class="size-5" />
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            
+            <img
+                class="rounded  shadow-2xl shadow-purple-400/20"
+                src={img}
+                alt="Captura del proyecto"
+            />
+        </article>
+    ))
+}

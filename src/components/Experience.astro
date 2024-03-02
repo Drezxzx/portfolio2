@@ -1,0 +1,27 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+{
+        date : "Febrero/2024-Actualidad",
+        tittle : "Practicas de un curso de programacion(PROGRAMACION EN LENGUAJES ESTRUCTURADOS Y DE GESTIÓN) ",
+        place : "Digital Target",
+        description : "Manejo de base de datos relacionales, transformación, exclución y explotación de datos. utilizando Access y SQL"
+    },
+    {
+        date : "Agoosto/2020-Mayo/2021",
+        tittle : "Practicas de bachillerato administrativo",
+        place : "Ayuntamento de Santo Domingo(Republica Dominicana)",
+        description : "Manejo de inventario haciendo uso de excel"
+    }
+    
+    
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3" >                  
+    
+    {EXPERIENCE.map(exp => (
+        <ExperienceItem {...exp} />
+    ))}
+    
+</ol>
+

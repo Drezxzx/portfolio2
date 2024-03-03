@@ -7,8 +7,10 @@ import Linkedin from "../icons/linkedin.astro";
 import Mail from "../icons/Mail.astro";
 import Breifcase from "../icons/Breifcase.astro";
 import Code from "../icons/Code.astro";
+import Exp from "../icons/Exp.astro";
 import Me from "../icons/Me.astro";
 import Social from "../components/Social.astro";
+import Tecnologies from "../components/Tecnologies.astro";
 import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import SectionContainer from '../components/SectionContainer.astro'
@@ -16,20 +18,20 @@ import Experience from '../components/Experience.astro'
 ---
 
 <Layout title="Portolio De Andres Desarrollador">
-	<main class="px-4">
-		<SectionContainer id="Inicio" class="py-44 pb-32">
+	<main class="px-4 animate-fade-in-down">
+		<SectionContainer id="Inicio"  class="py-44  pb-32">
 			<img
 				src="./Andres.jpeg"
 				alt="Logo"
 				class="rounded-full w-12 h-12 object-cover mb-2"
 			/>
 
-			<h1 class="lg:text-5xl md:text-4xl text-2xl font-bold flex pb-6 lg:pb-10 flex-row gap-x-4">
+			<h1 class="lg:text-5xl   md:text-4xl text-2xl font-bold flex pb-6 lg:pb-10 flex-row gap-x-4">
 				Hey, soy Andrés
 				<div class="flex items-center justify-center">
 					<a class="flex items-center justify-center"
 						href="https://www.linkedin.com/in/andr%C3%A9s-rodr%C3%ADguez-3153a1299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-						><Beadge>Disponible parea trabajar</Beadge></a
+						><Beadge>Disponible para trabajar</Beadge></a
 					>
 				</div>
 			</h1>
@@ -87,6 +89,16 @@ import Experience from '../components/Experience.astro'
 			<About>
 				
 			</About>
+		</SectionContainer>
+
+		<SectionContainer id="Tecnologias" >
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Exp class="Size-7"></Exp>
+				Tecnologías
+			</h2>
+			<Tecnologies>
+
+			</Tecnologies>
 		</SectionContainer>
 	</main>
 </Layout>

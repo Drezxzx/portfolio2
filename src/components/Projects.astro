@@ -6,9 +6,13 @@ import Php from "../icons/Php.astro";
 import Preview from "../icons/Preview.astro";
 import Github from "../icons/Github.astro";
 import Sql from "../icons/Sql.astro";
+import ReactRouter from '../icons/ReactRouter.astro'
+import TypeScript from '../icons/TypeScript.astro'
+import Tailwind from '../icons/Tailwind.astro'
 import Node from "../icons/Node.astro";
 
 import Social from "./Social.astro";
+import React from "../icons/React.astro";
 
 const TAGS = {
     PHP: {
@@ -40,6 +44,26 @@ const TAGS = {
         name: "mysql",
         class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
         icon: Sql,
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: Tailwind,
+    },
+    ReactRouter: {
+        name: "ReactRouter",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: ReactRouter,
+    },
+    TYPESCRYPT: {
+        name: "TypeScript",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: TypeScript,
+    },
+    REACT: {
+        name: "React",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: React,
     },
 };
 const PROJECTS = [
@@ -78,6 +102,15 @@ const PROJECTS = [
         tags: [TAGS.JS, TAGS.HTML, TAGS.CSS],
         github: "https://github.com/Drezxzx/reading-list",
         link: "https://drezxzx.github.io/reading-list/",
+    },
+    {
+        tittle: "Tienda De Movíles",
+        description:
+            "Tienda completa desarrolada con react, que cuenta con las funcionalidades de login, carrito de compra, detalles de productos, busquedas y compras. Apollada con una api propía",
+        img: "./project4.png",
+        tags: [TAGS.JS,TAGS.TAILWIND, TAGS.TYPESCRYPT , TAGS.ReactRouter, TAGS.REACT],
+        github: "https://github.com/Drezxzx/Store-react",
+        link: "https://store-react-xi.vercel.app/",
     },
 ];
 ---

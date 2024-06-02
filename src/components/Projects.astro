@@ -1,6 +1,8 @@
 ---
 import Css from "../icons/Css.astro";
 import Html from "../icons/Html.astro";
+import NextJs from "../icons/NextJs.astro";
+import Turso from "../icons/Turso.astro";
 import Js from "../icons/Js.astro";
 import Php from "../icons/Php.astro";
 import Preview from "../icons/Preview.astro";
@@ -10,7 +12,6 @@ import ReactRouter from '../icons/ReactRouter.astro'
 import TypeScript from '../icons/TypeScript.astro'
 import Tailwind from '../icons/Tailwind.astro'
 import Node from "../icons/Node.astro";
-
 import Social from "./Social.astro";
 import React from "../icons/React.astro";
 
@@ -65,6 +66,16 @@ const TAGS = {
         class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
         icon: React,
     },
+    TURSO: {
+        name: "TURSO",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: Turso,
+    },
+    NEXTJS: {
+        name: "NEXTJS",
+        class: "rounded-full bg-white/5 hover:scale-110 transition hover:bg-white/10 border border-white/10 flex justify-center items-center mg:gap-x-4 mg:py-2 mg:px-4 py-1 text-xs mg:text-base px-2",
+        icon: NextJs,
+    },
 };
 const PROJECTS = [
     {
@@ -86,13 +97,13 @@ const PROJECTS = [
         link: "https://tranlated-io.vercel.app/",
     },
     {
-        tittle: "Tienda De Movíles",
+        tittle: "Acortador para empresa",
         description:
-            "Tienda completa desarrolada con react, que cuenta con las funcionalidades de login, carrito de compra, detalles de productos, busquedas y compras. Apoyada con una api propía",
-        img: "./project4.png",
-        tags: [TAGS.JS,TAGS.TAILWIND, TAGS.TYPESCRYPT , TAGS.ReactRouter, TAGS.REACT, TAGS.MYSQL, TAGS.NODE_JS],
-        github: "https://github.com/Drezxzx/Store-react",
-        link: "https://store-react-xi.vercel.app/",
+            "Acortador de urls hecho para la empresa digital taget, desarrollado completamente por mi, utilizando turso db para la base de datos.",
+        img: "./project5.png",
+        tags: [ TAGS.TYPESCRYPT,TAGS.NEXTJS ,TAGS.TURSO],
+        github: "https://github.com/Drezxzx/shorter-url",
+        link: "https://d-orcin-nine.vercel.app/",  
     },
     {
         tittle: "Coffe-landing-page",
@@ -112,7 +123,16 @@ const PROJECTS = [
         tags: [TAGS.NODE_JS, TAGS.MYSQL, TAGS.JS, TAGS.HTML, TAGS.CSS],
         github: "https://github.com/Drezxzx/trivia",
         link: "https://trivia-ui0k.onrender.com",
-    }
+    },
+    {
+        tittle: "Tienda De Movíles",
+        description:
+            "Tienda completa desarrolada con react, que cuenta con las funcionalidades de login, carrito de compra, detalles de productos, busquedas y compras. Apoyada con una api propía",
+        img: "./project4.png",
+        tags: [TAGS.JS,TAGS.TAILWIND, TAGS.TYPESCRYPT , TAGS.ReactRouter, TAGS.REACT, TAGS.MYSQL, TAGS.NODE_JS],
+        github: "https://github.com/Drezxzx/Store-react",
+        link: "https://store-react-xi.vercel.app/",
+    },
 ];
 ---
 

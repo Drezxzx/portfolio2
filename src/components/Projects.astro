@@ -135,6 +135,11 @@ const PROJECTS = [
     },
 ];
 ---
+<style>
+    .zoom-hover img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 
 {
     PROJECTS.map(({ tittle, description, img, github, tags,link }) => (
@@ -175,7 +180,7 @@ const PROJECTS = [
             </div>
             
             <img
-                class="rounded  shadow-2xl shadow-purple-400/20"
+                class="rounded  object-cover transition-transform ease-in-out duration-300  shadow-2xl shadow-purple-400/20"
                 src={img}
                 alt="Captura del proyecto"
             />

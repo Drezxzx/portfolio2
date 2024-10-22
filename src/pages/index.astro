@@ -64,9 +64,9 @@ import Experience from '../components/Experience.astro'
 					<Mail />
 					andres250197@hotmail.com
 				</Social>
-				<Social>
+				<Social class="cursor-pointer" id="pdf">
 					<File/>
-					<button class="cursor-pointer" id="pdf">Ver CV</button>
+					<button >Ver CV</button>
 				</Social>
 			</nav>
 		</SectionContainer >
@@ -112,7 +112,7 @@ import Experience from '../components/Experience.astro'
 <script>
  function donwLoadPdf() {
 	const link = document.createElement("a");
-	link.href = "https://drive.google.com/file/d/1n1LpuULHKSogA0llqqCTID-0CTer8TLo/view?usp=drive_link";
+	link.href = "https://drive.google.com/file/d/1n1LpuULHKSogA0llqqCTID-0CTer8TLo/view?usp=sharing";
 	link.target = "_blank"
 	document.body.appendChild(link);
 	link.click();

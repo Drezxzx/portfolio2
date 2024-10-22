@@ -8,9 +8,9 @@ import Php from "../icons/Php.astro";
 import Preview from "../icons/Preview.astro";
 import Github from "../icons/Github.astro";
 import Sql from "../icons/Sql.astro";
-import ReactRouter from '../icons/ReactRouter.astro'
-import TypeScript from '../icons/TypeScript.astro'
-import Tailwind from '../icons/Tailwind.astro'
+import ReactRouter from "../icons/ReactRouter.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import Tailwind from "../icons/Tailwind.astro";
 import Node from "../icons/Node.astro";
 import Social from "./Social.astro";
 import React from "../icons/React.astro";
@@ -77,15 +77,25 @@ const TAGS = {
         icon: NextJs,
     },
 };
+
 const PROJECTS = [
     {
-        tittle: "Instagram Clone",
+        tittle: "Acortador Url",
         description:
-            "Clon de instagram desarrollado usando php y js con las funcionalidades de subir fotos, dar likes, comentar, login, seguir/dejar de seguir usuarios. Todo esto apoyado por una api y base de datos propia.",
-        img: "./project3.png",
-        tags: [TAGS.PHP, TAGS.JS, TAGS.HTML, TAGS.CSS, TAGS.MYSQL],
-        github: "https://github.com/Drezxzx/instagram-clone",
-        link: "https://drezzgram.000webhostapp.com/api/src/controllers/main.php",
+            "Acortador de urls, desarrollado completamente por mi, utilizando turso db para la base de datos.",
+        img: "./project5.png",
+        tags: [TAGS.TYPESCRYPT, TAGS.NEXTJS, TAGS.TURSO],
+        github: "https://github.com/Drezxzx/shorter-url",
+        link: "https://d-orcin-nine.vercel.app/",
+    },
+    {
+        tittle: "Coffe-landing-page",
+        description:
+            "Landing page creada con un api externa de una caféteria que muestra todos los productos de la caféteria y te permite ver los productos que estan disponibles y los que no.",
+        img: "./project1.png",
+        tags: [TAGS.TYPESCRYPT, TAGS.TAILWIND, TAGS.REACT],
+        github: "https://github.com/Drezxzx/coffe-landing-page",
+        link: "https://coffe-landing-page-lemon.vercel.app/",
     },
     {
         tittle: "Translated.io",
@@ -97,74 +107,61 @@ const PROJECTS = [
         link: "https://tranlated-io.vercel.app/",
     },
     {
-        tittle: "Acortador Url",
-        description:
-            "Acortador de urls, desarrollado completamente por mi, utilizando turso db para la base de datos.",
-        img: "./project5.png",
-        tags: [ TAGS.TYPESCRYPT,TAGS.NEXTJS ,TAGS.TURSO],
-        github: "https://github.com/Drezxzx/shorter-url",
-        link: "https://d-orcin-nine.vercel.app/",  
-    },
-    {
-        tittle: "Coffe-landing-page",
-        description:
-            "Landing page creada con un api externa de una caféteria que muestra todos los productos de la caféteria y te permite ver los productos que estan disponibles y los que no.",
-        img: "./project1.png",
-        tags: [TAGS.TYPESCRYPT, TAGS.TAILWIND, TAGS.REACT],
-        github: "https://github.com/Drezxzx/coffe-landing-page",
-        link: "https://coffe-landing-page-lemon.vercel.app/",
-    },
-
-    {
-        tittle: "Trivia",
-        description:
-            "Un trivia desarrollado con node.js, siguiendo la arquitectura MVC. Esta aplicación cuenta con un login para guardar puntuaciones de las partidas y mostrarse en un ranking global. Todo esto apoyado por una base de datos y api propia",
-        img: "./trivia.png",
-        tags: [TAGS.NODE_JS, TAGS.MYSQL, TAGS.JS, TAGS.HTML, TAGS.CSS],
-        github: "https://github.com/Drezxzx/trivia",
-        link: "https://trivia-ui0k.onrender.com",
-    },
-    {
         tittle: "Tienda De Movíles",
         description:
             "Tienda completa desarrolada con react, que cuenta con las funcionalidades de login, carrito de compra, detalles de productos, busquedas y compras. Apoyada con una api propía",
         img: "./project4.png",
-        tags: [TAGS.JS,TAGS.TAILWIND, TAGS.TYPESCRYPT , TAGS.ReactRouter, TAGS.REACT, TAGS.MYSQL, TAGS.NODE_JS],
+        tags: [
+            TAGS.JS,
+            TAGS.TAILWIND,
+            TAGS.TYPESCRYPT,
+            TAGS.ReactRouter,
+            TAGS.REACT,
+            TAGS.MYSQL,
+            TAGS.NODE_JS,
+        ],
         github: "https://github.com/Drezxzx/Store-react",
         link: "https://store-react-xi.vercel.app/",
     },
 ];
 ---
+
 <style>
     .zoom-hover img:hover {
-      transform: scale(1.05);
+        transform: scale(1.05);
     }
-  </style>
+</style>
 
 {
-    PROJECTS.map(({ tittle, description, img, github, tags,link }) => (
-        <article class="size-30 mb-24" >
-            <div >
+    PROJECTS.map(({ tittle, description, img, github, tags, link }) => (
+        <article class="size-30 mb-24">
+            <div>
                 <h3 class="md:text-2xl lg:text-3xl text-xl  flex flex-row justify-between mb-2 font-semibold text-purple-400/80 ">
-                    {tittle} <ul class="flex text-white flex-row gap-x-2">
-                <li>
-                    <Social class=" bg-[#1f2937] hover:bg-[#242d39]" href={github}>
-                        <Github class="size-5 md:size-6 lg:size-7"></Github>
-                        Repositorio 
-                    </Social>
-                  
-                </li>
-                <li>
-                    <Social class="  bg-[#1f2937] hover:bg-[#242d39]" href={link}>
-                        <Preview class="size-5 md:size-6 lg:size-7"></Preview>
-                        Preview 
-                    </Social>
-                
-                </li>
-                
-            </ul>
+                    {tittle}{" "}
+                    <ul class="flex text-white flex-row gap-x-2">
+                        <li>
+                            <Social
+                                class=" bg-[#1f2937] hover:bg-[#242d39]"
+                                href={github}
+                            >
+                                <Github class="size-5 md:size-6 lg:size-7" />
+                                Repositorio
+                            </Social>
+                        </li>
+                        <li>
+                            <Social
+                                class="  bg-[#1f2937] hover:bg-[#242d39]"
+                                href={link}
+                            >
+                                <Preview class="size-5 md:size-6 lg:size-7" />
+                                Preview
+                            </Social>
+                        </li>
+                    </ul>
                 </h3>
-                <p class="text-base text-white  md:text-xl mb-4 md:mb-6 text-pretty">{description} </p>
+                <p class="text-base text-white  md:text-xl mb-4 md:mb-6 text-pretty">
+                    {description}{" "}
+                </p>
                 <ul class="flex flex-row gap-x-1 gap-3 md:gap-x-2 min-w-2 flex-wrap md:min-w-120  mb-2">
                     {tags.map((tag) => (
                         <li>
@@ -178,7 +175,7 @@ const PROJECTS = [
                     ))}
                 </ul>
             </div>
-            
+
             <img
                 class="rounded  object-cover transition-transform ease-in-out duration-300  shadow-2xl shadow-purple-400/20"
                 src={img}

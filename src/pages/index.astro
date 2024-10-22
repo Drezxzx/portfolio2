@@ -66,7 +66,7 @@ import Experience from '../components/Experience.astro'
 				</Social>
 				<Social>
 					<File/>
-					<button class="cursor-pointer" id="pdf">Descargar CV</button>
+					<button class="cursor-pointer" id="pdf">Ver CV</button>
 				</Social>
 			</nav>
 		</SectionContainer >
@@ -113,7 +113,7 @@ import Experience from '../components/Experience.astro'
  function donwLoadPdf() {
 	const link = document.createElement("a");
 	link.href = "Curriculum Andrés Rodríguez.pdf";
-	link.download = "Curriculum Andrés Rodríguez.pdf";
+	link.target = "_blank"
 	document.body.appendChild(link);
 	link.click();
 	document.body.removeChild(link);

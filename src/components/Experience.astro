@@ -1,34 +1,29 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import ExperienceItem from "./ExperienceItem.astro";
 const EXPERIENCE = [
-{
-        date : "Abril/2024-Octubre/2024",
-        tittle : "Programador Junior ",
-        place : "Digital Target",
-        description : "
-Fui responsable de la gestión integral del área informática de la empresa, abarcando desde el diseño y desarrollo de bases de datos hasta el análisis avanzado de datos. Creé aplicaciones internas para optimizar procesos mediante la explotación eficiente de la información. Además, desarrollé varias aplicaciones web privadas adaptadas a las necesidades de la organización, integrando funcionalidades específicas para la gestión de datos. Apliqué técnicas de web scraping con Node.js y Python para extraer información relevante de diversas fuentes y diseñé procesos automatizables que mejoraron notablemente la eficiencia operativa."
-    },
-{
-        date : "Febrero/2024-Marzo/2024",
-        tittle : "Practicas Programador Junior ",
-        place : "Digital Target",
-        description : "Durante mis prácticas, participé en la creación de bases de datos, lo que me permitió adquirir habilidades en el diseño y gestión de información estructurada."
-    },
-    {
-        date : "Agoosto/2019-Mayo/2020",
-        tittle : "Practicas de bachillerato administrativo",
-        place : "Ayuntamento de Santo Domingo(Republica Dominicana)",
-        description : "Manejo de inventario haciendo uso de excel"
-    }
-    
-    
-]
+  {
+    date: "Abril/2024-Octubre/2024",
+    tittle: "Programador Junior ",
+    place: "Digital Target",
+    description: `
+Fui responsable de la gestión integral del área informática de la empresa, abarcando desde el diseño y desarrollo de bases de datos hasta el análisis avanzado de datos. Creé aplicaciones internas para optimizar procesos mediante la explotación eficiente de la información. Además, desarrollé varias aplicaciones web privadas adaptadas a las necesidades de la organización, integrando funcionalidades específicas para la gestión de datos. Apliqué técnicas de web scraping con Node.js y Python para extraer información relevante de diversas fuentes y diseñé procesos automatizables que mejoraron notablemente la eficiencia operativa.`,
+  },
+  {
+    date: "Febrero/2024-Marzo/2024",
+    tittle: "Practicas Programador Junior ",
+    place: "Digital Target",
+    description:
+      "Durante mis prácticas, participé en la creación de bases de datos, lo que me permitió adquirir habilidades en el diseño y gestión de información estructurada.",
+  },
+  {
+    date: "Agoosto/2019-Mayo/2020",
+    tittle: "Practicas de bachillerato administrativo",
+    place: "Ayuntamento de Santo Domingo(Republica Dominicana)",
+    description: "Manejo de inventario haciendo uso de excel",
+  },
+];
 ---
-<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3" >                  
-    
-    {EXPERIENCE.map(exp => (
-        <ExperienceItem {...exp} />
-    ))}
-    
-</ol>
 
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {EXPERIENCE.map((exp) => <ExperienceItem {...exp} />)}
+</ol>

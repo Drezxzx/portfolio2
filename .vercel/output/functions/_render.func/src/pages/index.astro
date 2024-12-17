@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+import File from "../icons/File.astro";
+import Beadge from "../components/Beadge.astro";
+import Github from "../icons/Github.astro";
+import Linkedin from "../icons/linkedin.astro";
+import Mail from "../icons/Mail.astro";
+import Breifcase from "../icons/Breifcase.astro";
+import Code from "../icons/Code.astro";
+import Exp from "../icons/Exp.astro";
+import Me from "../icons/Me.astro";
+import Social from "../components/Social.astro";
+import Tecnologies from "../components/Tecnologies.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import SectionContainer from '../components/SectionContainer.astro'
+import Experience from '../components/Experience.astro'
+---
+
+
+
+<Layout title="Portafolio De Andres Desarrollador">
+	<main class="px-4 animate-fade-in-down">
+		<SectionContainer id="Inicio"  class="py-44  pb-32">
+			<img
+				src="./Andres.jpeg"
+				alt="Logo"
+				class="rounded-full w-12 h-12 object-cover mb-2"
+			/>
+
+			<h1 class="lg:text-5xl text-white  md:text-4xl text-2xl font-bold flex pb-6 lg:pb-10 flex-row gap-x-4">
+				Hey, soy Andrés
+				<div class="flex items-center justify-center">
+					<a class="flex items-center justify-center"
+						target="_blank"
+						href="https://www.linkedin.com/in/andr%C3%A9s-rodr%C3%ADguez-3153a1299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+						><Beadge>Disponible para trabajar</Beadge></a
+					>
+				</div>
+			</h1>
+			<h2 class="text-white text-xl lg:text-3xl max-w-[700px] text-wrap">
+				<span class="text-purple-400/90"
+					>1 año de experiecia</span
+				>,
+				<span class="opacity-80">Desarrollador web.</span>
+				<span class="opacity-80">De Madrid, España 🇪🇸.</span>
+				<span class="opacity-80">Especializado en crear</span>
+				<span class="opacity-80"
+					>apliclaciones web y bases de datos relacionadas.</span
+				>
+			</h2>
+
+			<nav class="flex flex-wrap  gap-4 mt-8">
+				<Social href="https://github.com/Drezxzx">
+					<Github class="text-white mg:size-6 size-4" />
+					Github
+				</Social>
+				<Social
+					href="https://es.linkedin.com/in/andr%C3%A9s-rodr%C3%ADguez-3153a1299?original_referer=https%3A%2F%2Fwww.google.com%2F"
+				>
+					<Linkedin class="text-white mg:size-6 size-4" />
+					Linkedind
+				</Social>
+				<Social>
+					<Mail />
+					andres250197@hotmail.com
+				</Social>
+				<Social class="cursor-pointer" id="pdf">
+					<File/>
+					<button >Ver CV</button>
+				</Social>
+			</nav>
+		</SectionContainer >
+
+		<SectionContainer id="Experiencia">
+			<h2 class="text-3xl text-white  font-semibold mb-6 flex gap-x-3 items-center">
+				<Breifcase class="size-7"></Breifcase>
+				Experiecia laboral </h2>
+			<Experience>
+			</Experience>
+		</SectionContainer>
+
+		<SectionContainer id="Proyectos">
+			<h2 class="text-3xl text-white  font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7"></Code>
+				Proyectos
+			</h2>
+			<Projects/>
+		</SectionContainer>
+
+		<SectionContainer  id="Sobre mi">
+				<h2 class="text-3xl text-white  font-semibold mb-6 flex gap-x-3 items-center">
+					<Me class="Size-7"></Me>
+					Sobre mí
+				</h2>
+			<About>
+				
+			</About>
+		</SectionContainer>
+
+		<SectionContainer id="Tecnologias" >
+			<h2 class="text-3xl text-white  font-semibold mb-6 flex gap-x-3 items-center">
+				<Exp class="Size-7"></Exp>
+				Tecnologías
+			</h2>
+			<Tecnologies>
+
+			</Tecnologies>
+		</SectionContainer>
+	</main>
+</Layout>
+
+<script>
+ function donwLoadPdf() {
+	const link = document.createElement("a");
+	link.href = "https://drive.google.com/file/d/1RIqs5clF9YsZ86csIx4i3vmA-u6xJRUn/view?usp=sharing";
+	link.target = "_blank"
+	document.body.appendChild(link);
+	link.click();
+	document.body.removeChild(link);
+ }
+
+ const pdf = document.getElementById("pdf");
+ pdf?.addEventListener("click", donwLoadPdf);
+</script>

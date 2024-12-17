@@ -1,12 +1,12 @@
 /* empty css                                 */
-import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as addAttribute, e as renderHead, f as renderComponent, g as renderSlot, b as createAstro, s as spreadAttributes } from '../chunks/astro/server_BzczsngN.mjs';
+import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderScript, b as addAttribute, e as renderHead, f as renderComponent, g as renderSlot, h as createAstro, s as spreadAttributes } from '../chunks/astro/server_BGHe_ltw.mjs';
 import 'kleur/colors';
 import 'clsx';
 import { Analytics } from '@vercel/analytics/next';
 export { renderers } from '../renderers.mjs';
 
 const $$Header = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<header class="fixed top-0 z-10 flex items-center text-white justify-center w-full mx-auto mt-2" data-astro-cid-3ef6ksr2> <nav class="flex flex-row gap-6 w-[25rem] md:gap-10 opacity-90 p-1 md:w-[34rem] md:p-2 rounded-full items-center justify-center font-semibold" data-astro-cid-3ef6ksr2> <a href="#Inicio" class="hover:scale-110 transition hover:text-purple-500/90" data-astro-cid-3ef6ksr2>Inicio</a> <a href="#Experiencia" class="hover:scale-110 transition hover:text-purple-500/90" data-astro-cid-3ef6ksr2>Experiencia</a> <a href="#Proyectos" class="hover:scale-110 transition hover:text-purple-500/90" data-astro-cid-3ef6ksr2>Proyectos</a> <a href="#Sobre mi" class="hover:scale-110 transition hover:text-purple-500/90" data-astro-cid-3ef6ksr2>Sobre mi</a> </nav> </header>  `;
+  return renderTemplate`${maybeRenderHead()}<header class="fixed top-0 z-10 flex items-center text-white justify-center w-full mx-auto mt-2" data-astro-cid-3ef6ksr2> <nav class="flex flex-row gap-6 w-[25rem] md:gap-10 opacity-90 p-1 md:w-[34rem] md:p-2 rounded-full items-center justify-center font-semibold" data-astro-cid-3ef6ksr2> <a href="#Inicio" class="hover:scale-110 transition hover:text-purple-500/90" data-astro-cid-3ef6ksr2>Inicio</a> <a href="#Experiencia" class="hover:scale-110 transition hover:text-purple-500/90" data-astro-cid-3ef6ksr2>Experiencia</a> <a href="#Proyectos" class="hover:scale-110 transition hover:text-purple-500/90" data-astro-cid-3ef6ksr2>Proyectos</a> <a href="#Sobre mi" class="hover:scale-110 transition hover:text-purple-500/90" data-astro-cid-3ef6ksr2>Sobre mi</a> </nav> </header>  ${renderScript($$result, "/Users/andres/dev/portfolio2/src/components/Header.astro?astro&type=script&index=0&lang.ts")}`;
 }, "/Users/andres/dev/portfolio2/src/components/Header.astro", void 0);
 
 const $$Footer = createComponent(($$result, $$props, $$slots) => {
@@ -391,7 +391,7 @@ Proyectos
 Sobre mí
 </h2> ${renderComponent($$result3, "About", $$About, {})} ` })} ${renderComponent($$result2, "SectionContainer", $$SectionContainer, { "id": "Tecnologias" }, { "default": ($$result3) => renderTemplate` <h2 class="text-3xl text-white  font-semibold mb-6 flex gap-x-3 items-center"> ${renderComponent($$result3, "Exp", $$Exp, { "class": "Size-7" })}
 Tecnologías
-</h2> ${renderComponent($$result3, "Tecnologies", $$Tecnologies, {})} ` })} </main> ` })} `;
+</h2> ${renderComponent($$result3, "Tecnologies", $$Tecnologies, {})} ` })} </main> ` })} ${renderScript($$result, "/Users/andres/dev/portfolio2/src/pages/index.astro?astro&type=script&index=0&lang.ts")}`;
 }, "/Users/andres/dev/portfolio2/src/pages/index.astro", void 0);
 
 const $$file = "/Users/andres/dev/portfolio2/src/pages/index.astro";

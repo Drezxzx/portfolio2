@@ -1,4 +1,4 @@
-import { N as NOOP_MIDDLEWARE_HEADER, D as DEFAULT_404_COMPONENT } from './astro/server_BzczsngN.mjs';
+import { N as NOOP_MIDDLEWARE_HEADER, D as DEFAULT_404_COMPONENT } from './astro/server_BGHe_ltw.mjs';
 import { parse } from 'devalue';
 import { escape } from 'html-escaper';
 
@@ -9,9 +9,8 @@ const NOOP_MIDDLEWARE_FN = async (_ctx, next) => {
 };
 
 const ACTION_QUERY_PARAMS = {
-  actionName: "_astroAction",
-  actionPayload: "_astroActionPayload",
-  actionRedirect: "_astroActionRedirect"
+  actionName: "_action",
+  actionPayload: "_astroActionPayload"
 };
 
 const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/", "DEV": false, "MODE": "production", "PROD": true, "SITE": undefined, "SSR": true};
@@ -114,7 +113,7 @@ function deserializeActionResult(res) {
         })
       };
     }
-    if (Object.assign(__vite_import_meta_env__, {})?.PROD) {
+    if (Object.assign(__vite_import_meta_env__, { _: process.env._ })?.PROD) {
       return { error: ActionError.fromJson(json), data: void 0 };
     } else {
       const error = ActionError.fromJson(json);
@@ -257,7 +256,8 @@ const DEFAULT_404_ROUTE = {
   type: "page",
   route: "/404",
   fallbackRoutes: [],
-  isIndex: false
+  isIndex: false,
+  origin: "internal"
 };
 function ensure404Route(manifest) {
   if (!manifest.routes.some((route) => route.route === "/404")) {
@@ -273,7 +273,7 @@ async function default404Page({ pathname }) {
       tabTitle: "404: Not Found",
       pathname
     }),
-    { status: 404, headers: { "Content-Type": "text/html; charset=utf-8" } }
+    { status: 404, headers: { "Content-Type": "text/html" } }
   );
 }
 default404Page.isAstroComponentFactory = true;

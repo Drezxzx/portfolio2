@@ -6,6 +6,7 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 const { title } = Astro.props;
 import "@fontsource-variable/onest"
+import { Analytics } from '@vercel/analytics/next';
 
 
 ---
@@ -25,6 +26,7 @@ import "@fontsource-variable/onest"
 		
 		<Header/>
 		<slot />
+		<Analytics />
 		<Footer></Footer>
 	</body>
 </html>
